@@ -17,10 +17,12 @@ const WorkSteps = ({ data, style }) => {
           hover ? "bg-picto-primary" : "bg-[#EDD8FF80]"
         }`}
       >
-        <svg viewBox="0 0 32 32" className="w-7 h-7 sm:w-8 sm:h-8 block">
-          {data?.svgPath && (
-            <path d={data.svgPath} fill={hover ? "#FFFFFF" : "#A53DFF"} />
-          )}
+        <svg
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-8 h-8 sm:w-10 sm:h-10 block shrink-0"
+        >
+          <path d={data.svgPath} fill={hover ? "#FFFFFF" : "#A53DFF"} />
         </svg>
       </div>
 
