@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="flex max-md:flex-col justify-between mx-0 items-center h-full w-full text-neutral-200">
         <a href="#" className="flex items-center border-0">
           <img
-            src="public/assets/desaign.png"
+            src="assets/desaign.png"
             className="h-8 sm:h-14 rounded-2xl"
             alt="logo"
           />
