@@ -44,15 +44,18 @@ const WorkProcess = () => {
       <div className="lg:pe-10 xl:pe-35.75 max-xs:mb-3 max-xl:mb-8">
         <p className="section-title max-xl:text-center">Work Process</p>
         <p className="mt-6 mb-4 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
-          I provide graphic design and video editing services that focus on
-          creating visually compelling and meaningful content. My work includes
-          designing promotional materials such as posters, social media
-          graphics, and branding visuals that help communicate ideas clearly and
-          attract attention.
+          I follow a structured graphic design process that focuses on
+          creativity and visual clarity. It starts with understanding the
+          client’s brief and goals, followed by research and concept
+          development. I then move into creating visual compositions such as
+          layouts, color schemes, and typography that effectively communicate
+          the message. Finally, I refine the design to ensure it is visually
+          appealing, consistent, and ready for production or publication.
         </p>
         <p className="mt-6 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
-          I blend clean design with efficient code to build engaging,
-          user-friendly web experiences that stand out.
+          I am committed to continuously improving my skills and delivering
+          designs that not only look good but also communicate effectively and
+          create impact.
         </p>
       </div>
 

@@ -9,8 +9,6 @@ const WorkSteps = ({ data, style }) => {
       }`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onTouchStart={() => setHover(true)}
-      onTouchEnd={() => setHover(false)}
     >
       <div
         className={`w-11 h-11 sm:w-18 sm:h-18 flex items-center justify-center overflow-visible rounded-md ${
