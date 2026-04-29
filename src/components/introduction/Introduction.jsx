@@ -1,4 +1,4 @@
-import foto2 from "/assets/images/foto2.jpg";
+import person from "/assets/images/foto2.jpg";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 
@@ -65,7 +65,7 @@ const Introduction = () => {
       >
         <img
           className={`shadow-2xl shadow-gray-200 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl`}
-          src={foto2}
+          src={person}
           alt="foto2"
         />
       </div>
