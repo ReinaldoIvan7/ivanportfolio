@@ -1,8 +1,8 @@
 import Projects from "./Projects";
-import card1 from "../../assets/images/portfolio-images/download 1.jpg";
-import card2 from "../../assets/images/portfolio-images/download 2.jpg";
-import card3 from "../../assets/images/portfolio-images/download 3.jpg";
-import card4 from "../../assets/images/portfolio-images/download 4.jpg";
+import card1 from "/assets/images/portfolio-images/download 1.jpg";
+import card2 from "/assets/images/portfolio-images/download 2.jpg";
+import card3 from "/assets/images/portfolio-images/download 3.jpg";
+import card4 from "/assets/images/portfolio-images/download 4.jpg";
 
 const projectData = [
   {

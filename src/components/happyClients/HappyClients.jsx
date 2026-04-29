@@ -1,10 +1,10 @@
 const brandLogos = [
-  "./src/assets/vn.png",
-  "./src/assets/photoshop.png",
-  "./src/assets/snapseed.png",
-  "./src/assets/photoshop-lightroom.png",
-  "./src/assets/canva-icon.png",
-  "./src/assets/capcut-icon.png",
+  "assets/vn.png",
+  "assets/photoshop.png",
+  "assets/snapseed.png",
+  "assets/photoshop-lightroom.png",
+  "assets/canva-icon.png",
+  "assets/capcut-icon.png",
 ];
 
 const HappyClients = () => {

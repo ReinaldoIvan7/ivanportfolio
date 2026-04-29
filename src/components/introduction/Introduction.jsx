@@ -1,4 +1,4 @@
-import foto2 from "../../assets/images/foto2.jpg";
+import foto2 from "/assets/images/foto2.jpg";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 
