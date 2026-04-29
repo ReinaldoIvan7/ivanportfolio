@@ -20,7 +20,7 @@ const projectData = [
     category: "",
     title: "Promotional Design",
     description:
-      "Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.",
+      "I specialize in designing promotional content that highlights product value, enhances brand identity, and drives customer engagement.",
     link: "#!",
   },
   {
@@ -29,7 +29,7 @@ const projectData = [
     category: "",
     title: "Promotional Design",
     description:
-      "Developed a modern admin panel with a focus on usability and seamless navigation for end users and so on.",
+      "I create visually compelling promotional designs that transform ideas into impactful marketing visuals that capture attention instantly.",
     link: "#!",
   },
   {
@@ -38,7 +38,7 @@ const projectData = [
     category: "",
     title: "Promotional Design",
     description:
-      "Created a responsive dashboard layout that adapts smoothly across devices and screen sizes and so on.",
+      "I design promotional visuals that effectively communicate product benefits through clean, modern, and engaging visuals.",
     link: "#!",
   },
 ];

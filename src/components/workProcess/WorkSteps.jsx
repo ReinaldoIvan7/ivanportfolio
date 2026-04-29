@@ -7,8 +7,8 @@ const WorkSteps = ({ data, style }) => {
       className={`rounded-xl hover:drop-shadow-2xl shadow-gray-300 ease-out duration-1000  ${
         style && style
       }`}
-      onMouseOver={() => setHover(true)}
-      onMouseOut={() => setHover(false)}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
     >
       <div
         className={`w-11 h-11 sm:w-18 sm:h-18 ${
