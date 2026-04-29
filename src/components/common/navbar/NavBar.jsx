@@ -93,7 +93,7 @@ const NavBar = () => {
             className="flex items-center border-0 lg:max-xxl:ps-5"
           >
             <img
-              src="assets/desaign.png"
+              src="/assets/desaign.png"
               className="h-8 sm:h-14 rounded-2xl"
               alt="logo"
             />
