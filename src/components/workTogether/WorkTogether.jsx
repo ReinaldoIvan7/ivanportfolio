@@ -11,7 +11,8 @@ const WorkTogether = () => {
           <SplitText
             text="Feel free to reach out to me directly on WhatsApp for quick and easy communication. I'm always open to discussing new projects and creative ideas"
             split="words"
-            delayStart={0}
+            animation="fadeUp"
+            instant={true}
           />
         </p>
 
@@ -20,7 +21,7 @@ const WorkTogether = () => {
           <SplitText
             text="let’s connect and build something amazing together."
             split="words"
-            delayStart={1}
+            delayStart={0}
           />
         </p>
 

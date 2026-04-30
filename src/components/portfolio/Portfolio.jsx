@@ -52,17 +52,16 @@ const Portfolio = () => {
     >
       <div className="xl:mb-17.5 mb-5">
         <div className="max-sm:px-2 text-center mx-auto max-w-144.25">
-          {/* 🔥 TITLE */}
           <p className="section-title">
             <SplitText text="Portfolio" delayStart={0} />
           </p>
 
-          {/* 🔥 SUBTITLE */}
           <p className="font-normal text-[18px] max-sm:text-[14px] pt-6 text-gray-400">
             <SplitText
               text={`Here's a selection of my recent work, showcasing my skills in creating user-centric and visually appealing interfaces.`}
               split="words"
-              delayStart={0.4}
+              animation="fadeUp"
+              instant={true}
             />
           </p>
         </div>

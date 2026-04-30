@@ -19,12 +19,13 @@ const Introduction = () => {
       <div className="w-full flex flex-col justify-between max-lg:text-center">
         <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
           <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
-            <SplitText text="Hello, I’m" delayStart={0} />
+            <SplitText text="Hello, I’m" animation="fadeUp" instant={true} />
 
             <SplitText
               text="Reinaldo Ivan"
               className="text-nowrap shrink-0 inline-block w-full"
-              delayStart={0.6}
+              animation="fadeUp"
+              instant={true}
             />
           </p>
 
@@ -32,7 +33,7 @@ const Introduction = () => {
             <SplitText
               text="I'm a Freelance Graphic Designer and Frontend Developer based in Atambua, Indonesia. I graduated with a Bachelor's degree in Informatics Engineering from Widya Mandira Catholic University in Kupang."
               split="words"
-              delayStart={1.2}
+              delayStart={0.4}
             />
           </p>
 

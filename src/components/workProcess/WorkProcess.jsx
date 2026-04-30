@@ -51,7 +51,8 @@ const WorkProcess = () => {
           <SplitText
             text={`I follow a structured graphic design process that focuses on creativity and visual clarity. It starts with understanding the client’s brief and goals, followed by research and concept development. I then move into creating visual compositions such as layouts, color schemes, and typography that effectively communicate the message. Finally, I refine the design to ensure it is visually appealing, consistent, and ready for production or publication.`}
             split="words"
-            delayStart={0}
+            animation="fadeUp"
+            instant={true}
           />
         </p>
 
@@ -60,7 +61,8 @@ const WorkProcess = () => {
           <SplitText
             text={`I am committed to continuously improving my skills and delivering designs that not only look good but also communicate effectively and create impact.`}
             split="words"
-            delayStart={0}
+            animation="fadeUp"
+            instant={true}
           />
         </p>
       </div>

@@ -41,7 +41,8 @@ const Profile = () => {
               <SplitText
                 text="Hello, my name is Ivan. I am originally from Atambua, Indonesia. I completed a five-year Bachelor's degree in Informatics Engineering at Widya Mandira Catholic University in Kupang."
                 split="words"
-                delayStart={0}
+                animation="fadeUp"
+                instant={true}
               />
             </p>
 
@@ -49,7 +50,8 @@ const Profile = () => {
               <SplitText
                 text="During my studies, I gained extensive knowledge and hands-on experience in technology, including software development, system management, and digital solutions. I developed strong problem-solving skills and a solid foundation in the IT field."
                 split="words"
-                delayStart={0}
+                animation="fadeUp"
+                instant={true}
               />
             </p>
 
@@ -57,7 +59,8 @@ const Profile = () => {
               <SplitText
                 text="In addition, I have one year of professional experience working as an IT Support staff in a government institution, where I was responsible for maintaining computer systems, troubleshooting technical issues, and supporting daily IT operations."
                 split="words"
-                delayStart={0}
+                animation="fadeUp"
+                instant={true}
               />
             </p>
 
@@ -65,7 +68,8 @@ const Profile = () => {
               <SplitText
                 text="I am passionate about creative digital work, with a strong focus on graphic design and video editing. I enjoy transforming ideas into visual content that is both engaging and meaningful. Through my projects, I have developed skills in visual storytelling, branding, and multimedia production."
                 split="words"
-                delayStart={0}
+                animation="fadeUp"
+                instant={true}
               />
             </p>
 
@@ -73,7 +77,8 @@ const Profile = () => {
               <SplitText
                 text="As a graphic designer, I create visually appealing designs such as social media content, posters, and branding materials. As a video editor, I focus on crafting smooth, impactful videos by combining footage, sound, and effects to deliver clear and compelling messages."
                 split="words"
-                delayStart={0}
+                animation="fadeUp"
+                instant={true}
               />
             </p>
 
@@ -81,7 +86,8 @@ const Profile = () => {
               <SplitText
                 text="I am continuously learning and improving my skills to keep up with industry trends and deliver high-quality results. I am open to new opportunities, collaborations, and creative challenges."
                 split="words"
-                delayStart={0}
+                animation="fadeUp"
+                instant={true}
               />
             </p>
           </div>

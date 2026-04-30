@@ -46,7 +46,8 @@ const Contact = () => {
                 <SplitText
                   text="I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for."
                   split="words"
-                  delayStart={0.6}
+                  animation="fadeUp"
+                  instant={true}
                 />
               </p>
             </div>
@@ -68,7 +69,11 @@ const Contact = () => {
           <div className="w-full overflow-y-scroll py-6.5">
             {/* TITLE MOBILE */}
             <p className="text-xl mb-2 xs:text-2xl sm:text-2xl md:text-[38px] font-semibold text-[#132238] lg:hidden text-center">
-              <SplitText text="Let’s discuss your Project" delayStart={0} />
+              <SplitText
+                text="Let’s discuss your Project"
+                animation="fadeUp"
+                instant={true}
+              />
             </p>
 
             <Form />

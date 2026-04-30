@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import SplitText from "@/components/library/SplitText";
 
 const brandLogos = [
@@ -10,6 +11,29 @@ const brandLogos = [
 ];
 
 const HappyClients = () => {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  // 🔥 observer (SAMA kayak SplitText)
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // 🔧 control animasi
+  const stagger = 0.15;
+  const delayStart = 0.5;
+
   return (
     <div className="content py-10 md:py-25 flex flex-col items-center px-2">
       <div className="max-w-144.25 text-center">
@@ -23,13 +47,17 @@ const HappyClients = () => {
           <SplitText
             text="I leverage a range of modern and industry-standard tools to bring ideas to life with precision and creativity. From design to final output, I use tools like Adobe Photoshop, CapCut, Snapseed, Canva, and VN editor to craft visually compelling and high-quality content that meets professional standards."
             split="words"
-            delayStart={0}
+            animation="fadeUp"
+            instant={true}
           />
         </p>
       </div>
 
       {/* LOGOS */}
-      <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 pt-10">
+      <div
+        ref={ref}
+        className="flex flex-wrap justify-center items-center gap-10 md:gap-16 pt-10"
+      >
         {brandLogos.map((logo, index) => (
           <button
             key={index}
@@ -44,9 +72,11 @@ const HappyClients = () => {
                          transform transition duration-300
                          hover:scale-110 active:scale-95 cursor-pointer"
               style={{
-                animation: "fadeUp 0.6s ease forwards",
-                animationDelay: `${1.2 + index * 0.2}s`,
                 opacity: 0,
+                animation: inView ? "fadeUp 0.6s ease forwards" : "none",
+                animationDelay: inView
+                  ? `${delayStart + index * stagger}s`
+                  : "0s",
               }}
             />
           </button>

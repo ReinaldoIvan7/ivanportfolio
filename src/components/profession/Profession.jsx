@@ -46,7 +46,8 @@ const Profession = () => {
             <SplitText
               text="I provide graphic design and video editing services that focus on creating visually compelling and meaningful content. My work includes designing promotional materials such as posters, social media graphics, and branding visuals that help communicate ideas clearly and attract attention,"
               split="words"
-              delayStart={0}
+              animation="fadeUp"
+              instant={true}
             />
           </p>
 
@@ -54,7 +55,8 @@ const Profession = () => {
             <SplitText
               text="In video editing, I create engaging and dynamic content by combining storytelling, smooth transitions, and clean visual aesthetics. I aim to deliver high-quality results that not only look professional but also effectively convey messages and leave a lasting impression."
               split="words"
-              delayStart={0}
+              animation="fadeUp"
+              instant={true}
             />
           </p>
         </div>

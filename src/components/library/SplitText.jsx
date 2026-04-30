@@ -4,14 +4,17 @@ import "./splittext.css";
 const SplitText = ({
   text = "",
   as: Tag = "span",
-  split = "words", // tetap kompatibel
+  split = "words",
   className = "",
   delayStart = 0,
 
-  // 🔥 tambahan (optional, tidak wajib dipakai)
+  // tambahan
   stagger = 0.05,
   duration = 0.7,
-  animation = "fadeUp", // bisa ganti nanti
+  animation = "fadeUp",
+
+  // 🔥 NEW: mode kontrol
+  instant = false, // true = semua muncul bareng
 }) => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -25,7 +28,7 @@ const SplitText = ({
         if (entry.isIntersecting) {
           setInView(true);
         } else {
-          setInView(false); // replay saat scroll keluar
+          setInView(false);
         }
       },
       { threshold: 0.2 },
@@ -44,7 +47,11 @@ const SplitText = ({
           key={index}
           className={`split-item ${inView ? `animate-${animation}` : ""}`}
           style={{
-            animationDelay: inView ? `${delayStart + index * stagger}s` : "0s",
+            animationDelay: inView
+              ? instant
+                ? `${delayStart}s` // 🔥 semua sama
+                : `${delayStart + index * stagger}s`
+              : "0s",
             animationDuration: `${duration}s`,
           }}
         >
