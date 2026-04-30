@@ -1,4 +1,5 @@
 import Roles from "./Roles";
+import SplitText from "@/components/library/SplitText";
 
 const rolesData = [
   {
@@ -34,29 +35,40 @@ const Profession = () => {
       id="services"
     >
       <div className="flex flex-col justify-between h-fit md:pe-8 lg:pe-35.75 max-md:text-center my-auto">
-        <p className="section-title max-md:text-center">What I do?</p>
+        {/* TITLE */}
+        <p className="section-title max-md:text-center">
+          <SplitText text="What I do?" delayStart={0} />
+        </p>
+
+        {/* PARAGRAPH */}
         <div className="mt-6 text-[14px]">
           <p className="text-xs sm:text-lg font-normal text-gray-400 mb-4">
-            I provide graphic design and video editing services that focus on
-            creating visually compelling and meaningful content. My work
-            includes designing promotional materials such as posters, social
-            media graphics, and branding visuals that help communicate ideas
-            clearly and attract attention,
+            <SplitText
+              text="I provide graphic design and video editing services that focus on creating visually compelling and meaningful content. My work includes designing promotional materials such as posters, social media graphics, and branding visuals that help communicate ideas clearly and attract attention,"
+              split="words"
+              delayStart={0}
+            />
           </p>
+
           <p className="text-xs sm:text-lg font-normal text-gray-400">
-            In video editing, I create engaging and dynamic content by combining
-            storytelling, smooth transitions, and clean visual aesthetics. I aim
-            to deliver high-quality results that not only look professional but
-            also effectively convey messages and leave a lasting impression.
+            <SplitText
+              text="In video editing, I create engaging and dynamic content by combining storytelling, smooth transitions, and clean visual aesthetics. I aim to deliver high-quality results that not only look professional but also effectively convey messages and leave a lasting impression."
+              split="words"
+              delayStart={0}
+            />
           </p>
         </div>
+
+        {/* BUTTON */}
         <a
           href="mailto:ivanmanek06@gmail.com"
           className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
         >
-          Say Hello!
+          Say Hello!"
         </a>
       </div>
+
+      {/* ROLES LIST */}
       <div className="">
         {rolesData.map((role, index) => (
           <Roles role={role} key={index} />

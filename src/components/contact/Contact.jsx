@@ -6,6 +6,7 @@ import {
 import Address from "./Address";
 import Form from "./Form";
 import SocialMedia from "../common/socialMedia/SocialMedia";
+import SplitText from "@/components/library/SplitText";
 
 const addressData = [
   {
@@ -35,27 +36,41 @@ const Contact = () => {
         <div className="flex flex-col-reverse lg:gap-5 xl:gap-25.75 lg:flex-row justify-between">
           <div>
             <div>
+              {/* TITLE DESKTOP */}
               <p className="text-[35px] max-lg:hidden font-semibold text-nowrap text-[#132238]">
-                Let’s discuss your Project
+                <SplitText text="Let’s discuss your Project" delayStart={0} />
               </p>
+
+              {/* DESCRIPTION */}
               <p className="text-[12px] xs:text-[14px] sm:text-lg md:text-lg max-lg:text-center pt-4 font-normal text-soft-dark">
-                I'm available for freelance work. Drop me a line if you have a
-                project you think I'd be a good fit for.
+                <SplitText
+                  text="I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for."
+                  split="words"
+                  delayStart={0.6}
+                />
               </p>
             </div>
+
+            {/* ADDRESS LIST */}
             <div className="my-8.75 sm:max-lg:flex justify-between items-center">
               {addressData.map((item, index) => (
                 <Address item={item} key={index} />
               ))}
             </div>
+
+            {/* SOCIAL */}
             <div className="w-full max-lg:text-center max-md:mb-4">
               <SocialMedia />
             </div>
           </div>
+
+          {/* FORM SIDE */}
           <div className="w-full overflow-y-scroll py-6.5">
+            {/* TITLE MOBILE */}
             <p className="text-xl mb-2 xs:text-2xl sm:text-2xl md:text-[38px] font-semibold text-[#132238] lg:hidden text-center">
-              Let’s discuss your Project
+              <SplitText text="Let’s discuss your Project" delayStart={0} />
             </p>
+
             <Form />
           </div>
         </div>

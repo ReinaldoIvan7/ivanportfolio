@@ -1,23 +1,34 @@
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SplitText from "@/components/library/SplitText";
 
 const WorkTogether = () => {
   return (
     <div className="py-25 max-w-169 mx-auto px-2">
       <div className="text-center">
-        <p className="text-white md:font-semibold text-lg sm:text-xl md:text-2xl leading-relaxed max-w-2xl pb-8">
-          Feel free to reach out to me directly on WhatsApp for quick and easy
-          communication. I'm always open to discussing new projects and creative
-          ideas
+        {/* TEXT UTAMA */}
+        <p className="text-white md:font-semibold text-lg sm:text-xl md:text-2xl leading-relaxed max-w-2xl pb-8 mx-auto">
+          <SplitText
+            text="Feel free to reach out to me directly on WhatsApp for quick and easy communication. I'm always open to discussing new projects and creative ideas"
+            split="words"
+            delayStart={0}
+          />
         </p>
+
+        {/* SUBTEXT */}
         <p className="text-[#A5ACB5] text-xs sm:text-lg font-normal text-center pb-8">
-          let’s connect and build something amazing together.
+          <SplitText
+            text="let’s connect and build something amazing together."
+            split="words"
+            delayStart={1}
+          />
         </p>
+
+        {/* BUTTON */}
         <a
           href="https://wa.me/082144959721"
           target="_blank"
-          className="btn btn-primary px-4 md:px-6.5 py-3 md:py-6 text-[12px] md:text-[16px]"
+          className="btn btn-primary px-4 md:px-6.5 py-3 md:py-6 text-[12px] md:text-[16px] inline-flex items-center justify-center"
         >
           Chat on WhatsApp
           <FontAwesomeIcon

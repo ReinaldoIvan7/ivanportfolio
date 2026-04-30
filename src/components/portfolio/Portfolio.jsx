@@ -3,6 +3,7 @@ import card1 from "/assets/images/portfolio-images/download 1.jpg";
 import card2 from "/assets/images/portfolio-images/download 2.jpg";
 import card3 from "/assets/images/portfolio-images/download 3.jpg";
 import card4 from "/assets/images/portfolio-images/download 4.jpg";
+import SplitText from "@/components/library/SplitText";
 
 const projectData = [
   {
@@ -51,13 +52,22 @@ const Portfolio = () => {
     >
       <div className="xl:mb-17.5 mb-5">
         <div className="max-sm:px-2 text-center mx-auto max-w-144.25">
-          <p className="section-title ">Portfolio</p>
+          {/* 🔥 TITLE */}
+          <p className="section-title">
+            <SplitText text="Portfolio" delayStart={0} />
+          </p>
+
+          {/* 🔥 SUBTITLE */}
           <p className="font-normal text-[18px] max-sm:text-[14px] pt-6 text-gray-400">
-            Here's a selection of my recent work, showcasing my skills in
-            creating user-centric and visually appealing interfaces.
+            <SplitText
+              text={`Here's a selection of my recent work, showcasing my skills in creating user-centric and visually appealing interfaces.`}
+              split="words"
+              delayStart={0.4}
+            />
           </p>
         </div>
       </div>
+
       <div className="mx-auto flex justify-center">
         <div className="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-6">
           {projectData.slice(0, 4).map((data, index) => (
@@ -79,25 +89,24 @@ const Portfolio = () => {
             ></iframe>
           </div>
 
-          {/* OPTIONAL TEXT */}
+          {/* 🔥 VIDEO TEXT */}
           <div className="p-4 xs:p-6 text-center">
             <p className="text-gray-900 text-lg font-semibold">
-              My Video Project
+              <SplitText text="My Video Project" delayStart={0} />
             </p>
+
             <p className="text-gray-600 text-sm mt-2">
-              A showcase of my video editing work.
+              <SplitText
+                text="A showcase of my video editing work."
+                split="words"
+                delayStart={0}
+              />
             </p>
           </div>
         </div>
       </div>
-      <div className="text-center">
-        {/* <a
-          href="#!"
-          className="btn btn-primary py-3 px-6 mt-12.5 text-center text-[16px] font-semibold"
-        >
-          More Project
-        </a> */}
-      </div>
+
+      <div className="text-center">{/* button tetap */}</div>
     </div>
   );
 };

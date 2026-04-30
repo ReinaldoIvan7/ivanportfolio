@@ -1,4 +1,5 @@
 import desaign from "/assets/desaign.png";
+import SplitText from "@/components/library/SplitText";
 
 /* Footer nabLinks */
 const navItems = [
@@ -10,36 +11,56 @@ const navItems = [
   { id: 6, name: "Services", url: "Services" },
   { id: 7, name: "Contact", url: "Contact" },
 ];
+
 const copyrightYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
     <div className="pt-25 md:pt-40 content max-2xl:px-3">
       <div className="flex max-md:flex-col justify-between mx-0 items-center h-full w-full text-neutral-200">
+        {/* LOGO */}
         <a href="#" className="flex items-center border-0">
           <img src={desaign} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
-          <p className="text-3xl sm:text-[32px] my-auto ms-[12px] font-semibold">
-            Ivan
-          </p>
+
+          <SplitText
+            text="Ivan"
+            split="chars"
+            delayStart={0.1}
+            className="text-3xl sm:text-[32px] my-auto ms-[12px] font-semibold"
+          />
         </a>
+
+        {/* NAV */}
         <div className="mx-7 max-md:my-7 text-center">
-          {navItems.map((item) => (
+          {navItems.map((item, i) => (
             <a
               key={item.id}
               className="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px]"
               href={`#${item.url.toLowerCase()}`}
             >
-              {item.name}
+              <SplitText text={item.name} split="chars" delayStart={i * 0.15} />
               <span className="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
             </a>
           ))}
         </div>
+
+        {/* COPYRIGHT */}
         <p className="text-[12px] sm:text-[16px]">
-          Copyright &copy; {copyrightYear} Ivan.
+          <SplitText
+            text={`Copyright © ${copyrightYear} Ivan.`}
+            split="words"
+            delayStart={0.8}
+          />
         </p>
       </div>
+
+      {/* TAGLINE */}
       <p className="text-white text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
-        Crafting modern, clean & professional digital experiences.
+        <SplitText
+          text="Crafting modern, clean & professional digital experiences."
+          split="words"
+          delayStart={0.6}
+        />
       </p>
     </div>
   );

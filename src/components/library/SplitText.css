@@ -1,0 +1,81 @@
+.split-item {
+  display: inline-block;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* ========================
+   FADE UP (default kamu)
+======================== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ========================
+   FADE LEFT
+======================== */
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeLeft {
+  animation: fadeLeft ease forwards;
+}
+
+/* ========================
+   SCALE (zoom)
+======================== */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn ease forwards;
+}
+
+/* ========================
+   BLUR PREMIUM
+======================== */
+@keyframes blurUp {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.animate-blurUp {
+  animation: blurUp cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

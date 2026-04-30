@@ -1,9 +1,13 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import SplitText from "@/components/library/SplitText";
 
 const Projects = ({ data }) => {
   const [showImage, setShowImage] = useState(false);
+
+  // 🔥 delay berdasarkan id (biar urut antar card)
+  const baseDelay = (data?.id - 1) * 0.3;
 
   return (
     <>
@@ -50,15 +54,24 @@ const Projects = ({ data }) => {
 
         {/* CONTENT */}
         <div className="p-4 xs:p-8">
+          {/* CATEGORY */}
           <p className="text-gray-400 text-xs font-medium">{data?.category}</p>
+
+          {/* 🔥 TITLE (Promotional Design) */}
           <p className="text-gray-900 text-md xxs:text-lg font-semibold pt-1 mb-3">
-            {data?.title}
+            <SplitText text={data?.title} delayStart={baseDelay} />
           </p>
+
+          {/* 🔥 DESCRIPTION */}
           <p
             style={{ lineHeight: "20px", letterSpacing: "0%" }}
             className="text-gray-600 text-xs xxs:text-[14px] text-wrap"
           >
-            {data?.description}
+            <SplitText
+              text={data?.description}
+              split="words"
+              delayStart={baseDelay + 0.2}
+            />
           </p>
         </div>
       </div>

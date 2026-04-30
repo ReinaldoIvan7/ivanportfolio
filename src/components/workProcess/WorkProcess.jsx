@@ -1,4 +1,5 @@
 import WorkSteps from "./WorkSteps";
+import SplitText from "@/components/library/SplitText";
 
 const workStepData = [
   {
@@ -42,20 +43,25 @@ const WorkProcess = () => {
       id="work-process"
     >
       <div className="lg:pe-10 xl:pe-35.75 max-xs:mb-3 max-xl:mb-8">
-        <p className="section-title max-xl:text-center">Work Process</p>
-        <p className="mt-6 mb-4 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
-          I follow a structured graphic design process that focuses on
-          creativity and visual clarity. It starts with understanding the
-          client’s brief and goals, followed by research and concept
-          development. I then move into creating visual compositions such as
-          layouts, color schemes, and typography that effectively communicate
-          the message. Finally, I refine the design to ensure it is visually
-          appealing, consistent, and ready for production or publication.
+        <p className="section-title max-xl:text-center">
+          <SplitText text="Work Process" delayStart={0} />
         </p>
+
+        <p className="mt-6 mb-4 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
+          <SplitText
+            text={`I follow a structured graphic design process that focuses on creativity and visual clarity. It starts with understanding the client’s brief and goals, followed by research and concept development. I then move into creating visual compositions such as layouts, color schemes, and typography that effectively communicate the message. Finally, I refine the design to ensure it is visually appealing, consistent, and ready for production or publication.`}
+            split="words"
+            delayStart={0}
+          />
+        </p>
+
+        {/* 🔥 PARAGRAPH 2 */}
         <p className="mt-6 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
-          I am committed to continuously improving my skills and delivering
-          designs that not only look good but also communicate effectively and
-          create impact.
+          <SplitText
+            text={`I am committed to continuously improving my skills and delivering designs that not only look good but also communicate effectively and create impact.`}
+            split="words"
+            delayStart={0}
+          />
         </p>
       </div>
 
