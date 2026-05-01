@@ -3,6 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 import SplitText from "@/components/library/SplitText";
+import Swal from "sweetalert2";
+
+export const showDownloadAlert = () => {
+  Swal.fire({
+    icon: "success",
+    title: "Thank You!",
+    text: "Thanks for taking the time to view my CV. Hope you enjoy it!",
+    confirmButtonText: "OK",
+    showConfirmButton: true,
+    timer: undefined,
+  });
+};
 
 const Profile = () => {
   return (
@@ -97,6 +109,7 @@ const Profile = () => {
               href={`${import.meta.env.BASE_URL}assets/cv/ivan-cv.pdf`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={showDownloadAlert}
               style={{
                 animation: "fadeUp 0.6s ease forwards",
                 animationDelay: "3s",
