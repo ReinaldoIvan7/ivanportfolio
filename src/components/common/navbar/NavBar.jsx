@@ -4,7 +4,7 @@ import desaign from "/assets/desaign.png";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction" },
-  { id: 2, name: "About", url: "profile" },
+  { id: 2, name: "About", url: "About" },
   { id: 3, name: "Process", url: "work-process" },
   { id: 4, name: "Portfolio", url: "portfolio" },
   // { id: 5, name: "Blog", url: "blog" },

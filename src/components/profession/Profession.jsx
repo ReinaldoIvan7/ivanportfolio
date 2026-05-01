@@ -24,7 +24,7 @@ const rolesData = [
     id: 4,
     title: "Tools",
     description:
-      "I use industry-standard tools like Adobe Photoshop, Capcut, Snapseed, Canva, and Figma to create high-quality digital content.",
+      "I use industry-standard tools like Adobe Photoshop, Capcut, Snapseed, Canva, and VN Editor to create high-quality digital content.",
   },
 ];
 

@@ -58,7 +58,7 @@ const Portfolio = () => {
 
           <p className="font-normal text-[18px] max-sm:text-[14px] pt-6 text-gray-400">
             <SplitText
-              text={`Here's a selection of my recent work, showcasing my skills in creating user-centric and visually appealing interfaces.`}
+              text={`Here is a curated selection of my recent promotional poster designs, crafted with a modern style to capture attention and create strong visual impact.`}
               split="words"
               animation="fadeUp"
               instant={true}

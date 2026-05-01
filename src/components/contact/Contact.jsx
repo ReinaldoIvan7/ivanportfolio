@@ -37,14 +37,14 @@ const Contact = () => {
           <div>
             <div>
               {/* TITLE DESKTOP */}
-              <p className="text-[35px] max-lg:hidden font-semibold text-nowrap text-[#132238]">
-                <SplitText text="Let’s discuss your Project" delayStart={0} />
+              <p className="text-[35px] max-lg:hidden font-semibold text-[#132238] max-w-3xl leading-tight">
+                <SplitText text="Let’s discuss collaboration" delayStart={0} />
               </p>
 
               {/* DESCRIPTION */}
-              <p className="text-[12px] xs:text-[14px] sm:text-lg md:text-lg max-lg:text-center pt-4 font-normal text-soft-dark">
+              <p className="text-[12px] xs:text-[14px] sm:text-lg md:text-lg max-lg:text-center pt-4 font-normal text-soft-dark max-w-2xl leading-relaxed">
                 <SplitText
-                  text="I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for."
+                  text="I am available for graphic design roles and open to contributing my skills in creating impactful and visually engaging designs. I would welcome the opportunity to be part of your team."
                   split="words"
                   animation="fadeUp"
                   instant={true}
