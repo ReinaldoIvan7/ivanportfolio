@@ -27,7 +27,7 @@ const WorkTogether = () => {
 
         {/* BUTTON */}
         <a
-          href="https://wa.me/082144959721"
+          href="https://wa.me/6282144959721?text=Hello%2C%0AWe%20have%20reviewed%20your%20graphic%20design%20portfolio,%20and%20would%20like%20to%20discuss%20a%20possible%20opportunity%20with%20you."
           target="_blank"
           className="btn btn-primary px-4 md:px-6.5 py-3 md:py-6 text-[12px] md:text-[16px] inline-flex items-center justify-center"
         >
