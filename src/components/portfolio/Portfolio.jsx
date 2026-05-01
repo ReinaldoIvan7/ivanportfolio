@@ -1,8 +1,8 @@
 import Projects from "./Projects";
-import card1 from "/assets/images/portfolio-images/download 1.jpg";
-import card2 from "/assets/images/portfolio-images/download 2.jpg";
-import card3 from "/assets/images/portfolio-images/download 3.jpg";
-import card4 from "/assets/images/portfolio-images/download 4.jpg";
+import card1 from "/assets/images/portfolio-images/1.png";
+import card2 from "/assets/images/portfolio-images/2.png";
+import card3 from "/assets/images/portfolio-images/3.png";
+import card4 from "/assets/images/portfolio-images/4.png";
 import SplitText from "@/components/library/SplitText";
 
 const projectData = [
@@ -12,7 +12,7 @@ const projectData = [
     category: "",
     title: "Promotional Design",
     description:
-      "I focus on crafting smooth, responsive interfaces that balance aesthetic appeal with practical functionality.",
+      "I focus on designing visuals that harmonize with the product’s color tone, ensuring a natural and cohesive appearance.",
     link: "#!",
   },
   {
@@ -21,7 +21,7 @@ const projectData = [
     category: "",
     title: "Promotional Design",
     description:
-      "I specialize in designing promotional content that highlights product value, enhances brand identity, and drives customer engagement.",
+      "I create visually appealing food promotions that highlight taste and quality, while using clean and engaging visuals to attract attention and encourage customers to try the product.",
     link: "#!",
   },
   {
