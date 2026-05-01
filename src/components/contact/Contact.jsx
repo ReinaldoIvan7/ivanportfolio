@@ -22,7 +22,7 @@ const addressData = [
   {
     icon: faPhone,
     title: "Call Me Now",
-    description: "0821 4495 9721",
+    description: "+62 821-4495-9721",
   },
 ];
 
