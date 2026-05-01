@@ -1,5 +1,4 @@
 import person from "/assets/images/foto2.jpg";
-import cv from "/assets/cv/jokowi.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
@@ -95,8 +94,9 @@ const Profile = () => {
           <div className="mt-8 flex max-md:justify-center">
             <a
               className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary ms-4 text-xs xxs:text-[14px] sm:text-[16px]"
-              href={cv}
-              download="jokowi.jpg"
+              href={`${import.meta.env.BASE_URL}assets/cv/ivan-cv.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 animation: "fadeUp 0.6s ease forwards",
                 animationDelay: "3s",
