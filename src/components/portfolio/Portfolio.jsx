@@ -5,6 +5,7 @@ import card1 from "/assets/images/portfolio-images/1.png";
 import card2 from "/assets/images/portfolio-images/2.png";
 import card3 from "/assets/images/portfolio-images/3.png";
 import card4 from "/assets/images/portfolio-images/4.png";
+import { useRef } from "react";
 
 const projectData = [
   {
@@ -41,30 +42,39 @@ const videoData = [
   {
     id: 1,
     file: "1.mp4",
-    title: "Video Project 1",
+    title: "Product Promo Video",
     description: "A showcase of my video editing work.",
   },
   {
     id: 2,
     file: "2.mp4",
-    title: "Video Project 2",
+    title: "Product Promo Video",
     description: "Creative promotional video design.",
   },
   {
     id: 3,
     file: "3.mp4",
-    title: "Video Project 3",
+    title: "Product Promo Video",
     description: "Modern motion visual for marketing.",
   },
   {
     id: 4,
     file: "4.mp4",
-    title: "Video Project 4",
+    title: "Product Promo Video",
     description: "Engaging short-form content.",
   },
 ];
 
 const Portfolio = () => {
+  const videoRefs = useRef([]);
+  const handlePlay = (currentIndex) => {
+    videoRefs.current.forEach((video, index) => {
+      if (video && index !== currentIndex) {
+        video.pause();
+        video.currentTime = 0; // reset ke awal
+      }
+    });
+  };
   return (
     <div
       className="content mt-10 md:mt-15 xl:mt-25 mb-10 md:mb-25 max-xxl:p-2"
@@ -94,11 +104,26 @@ const Portfolio = () => {
         </div>
       </div>
 
+      {/* TITTLE */}
+      <div className="text-center mx-auto max-w-144.25 mt-12 mb-6">
+        <p className="section-title">
+          <SplitText text="Video Projects" delayStart={0} />
+        </p>
+
+        <p className="font-normal text-[18px] max-sm:text-[14px] pt-4 text-gray-400">
+          <SplitText
+            text="A selection of my video editing work, showcasing engaging motion visuals and promotional content."
+            split="words"
+            instant={true}
+          />
+        </p>
+      </div>
+
       {/* VIDEO GRID */}
       <div className="mt-12">
         <div className="mx-auto flex justify-center">
           <div className="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-6">
-            {videoData.map((data) => (
+            {videoData.map((data, index) => (
               <div
                 key={data.id}
                 className="max-w-106 rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-200 overflow-hidden"
@@ -106,11 +131,13 @@ const Portfolio = () => {
                 {/* VIDEO */}
                 <div className="w-full aspect-[9/16] overflow-hidden bg-black">
                   <video
+                    ref={(el) => (videoRefs.current[index] = el)}
                     src={`${import.meta.env.BASE_URL}assets/videos/${data.file}`}
                     className="w-full h-full object-cover"
                     controls
                     preload="metadata"
                     playsInline
+                    onPlay={() => handlePlay(index)}
                   />
                 </div>
 
