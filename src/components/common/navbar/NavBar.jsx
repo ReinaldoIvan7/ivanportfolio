@@ -94,7 +94,7 @@ const NavBar = () => {
           >
             <img src={desaign} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
 
-            <p className="text-2xl sm:text-[32px] font-semibold text-black/80">
+            <p className="text-2xl sm:text-[32px] my-auto ms-1 font-semibold">
               Ivan
             </p>
           </Link>
